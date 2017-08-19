@@ -13,17 +13,17 @@ function guess() {
 	}
 	attempt.value++;
 	if( getResults(input.value) ) {
-		setMessage("You won!!! :)");
+		setMessage("You Win! :)");
 		showAnswer(true);
 		showReplay();
 	}
 	else if( attempt.value >= 10 ) {
-		setMessage("You lose this time :(");
+		setMessage("You Lose! :(");
 		showAnswer(false);
 		showReplay();
 	}
 	else {
-		setMessage("Nope! Next Guess?");
+		setMessage("Incorrect, try again.");
 	}
 }
 
@@ -70,7 +70,7 @@ function getResults(input) {
 }
 function showAnswer(success) {
 	let code = document.getElementById('code');
-	if( success ) {
+	if(success) {
 		code.className += " success";
 	}
 	else {
